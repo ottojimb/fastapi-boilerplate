@@ -14,7 +14,7 @@ Simple Personal FastAPI Boilerplate with postgres+postgis, auto generated migrat
 
 ## Util commands
 
-### How to test
+### How to test 🧪
 
 Run:
 
@@ -22,7 +22,7 @@ Run:
 pytest
 ```
 
-### How to live code
+### How to live code 👨‍💻/👩‍💻
 
 Run:
 
@@ -30,7 +30,7 @@ Run:
 uvicorn app.main:app --reload
 ```
 
-### How to debug
+### How to debug 🔍
 
 Run:
 
@@ -40,8 +40,24 @@ ipython -m uvicorn app.main:app --pdb
 
 Or press F5 in vscode
 
-### How to get the coverage to pass it on to your Project Manager and avoid stupid questions about your progress:
+### How to get the coverage to pass it on to your Project Manager and avoid stupid questions about your progress 📈
 
 ```
 pytest --cov=app
 ```
+
+### How to build everything with docker-compose 🐋📦
+
+```
+docker-compose up --build
+```
+
+### How to run the test in the docker compose (for CI/CD) 🧪
+
+```
+docker-compose run fastapi-core pytest
+```
+
+💡 Important Note: the pytest project was made to avoid interruptions with the real database, the data is ephemeral in each test
+
+💡 Important Note #2: There are some mypy issues to be fixed... someday...
